@@ -1,0 +1,373 @@
+
+
+
+body{
+    margin: 0;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+
+    box-sizing: border-box;
+    /*padding: 10px;*/
+}
+
+.logo{
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.logo img{
+    width: 40px;
+    height: 50px;
+}
+
+.title{
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.payoff{
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+
+.container article{
+    border: 1px solid black;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.navbar{
+    min-height: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 4;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav-branding{
+    font-size: 1rem;
+}
+
+.nav-link{
+    transition: 0.7s ease;
+}
+
+.nav-link:hover{
+    color: dodgerblue;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    background-color: black;
+}
+
+.artikel1{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 11;
+}
+
+.artikel2{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 5;
+    grid-row-end: 11;
+}
+
+.artikel3{
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 11;
+}
+
+.artikel4{
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 11;
+    grid-row-end: 16;
+}
+
+.artikel5{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 11;
+    grid-row-end: 16;
+}
+
+.artikel6{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 11;
+    grid-row-end: 16;
+}
+
+.product1 img, .product2 img, .product3 img{
+    width: 120px;
+    height: 120px;
+}
+
+.product3 img{
+    display: flex;
+}
+
+.product1{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 16;
+    grid-row-end: 20;
+}
+
+.product2{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 16;
+    grid-row-end: 20;
+}
+
+.product3{
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 16;
+    grid-row-end: 20;
+}
+
+.footer{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 20;
+    grid-row-end: 20;
+}
+
+
+
+.cookie{
+    opacity: 0.5;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: #FA0;
+    color: #ffffff;
+}
+
+
+@media only screen and (min-width: 481px) and (max-width: 1279px) {
+    .product3 img{
+        display: none;
+    }
+
+    .artikel1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 5;
+        grid-row-end: 11;
+    }
+
+    .artikel2{
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 5;
+        grid-row-end: 11;
+    }
+
+    .artikel3{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 11;
+        grid-row-end: 12;
+    }
+
+    .artikel5{
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 11;
+        grid-row-end: 16;
+    }
+
+    .artikel6{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 12;
+        grid-row-end: 16;
+    }
+
+    .artikel2, .artikel5{
+        font-size: 12px;
+    }
+
+    .artikel4{
+        display: none;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 480px) {
+    .container{
+        height: 150vh;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        position: fixed;
+        left: -110%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #262626;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .nav-item a{
+        color: white;
+    }
+
+    .nav-menu.active{
+        left: 0;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .title{
+        display: none;
+    }
+
+    .navbar{
+        grid-column-start: 1;
+        grid-column-end: span 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        margin-right: 25px;
+    }
+
+    .payoff{
+        grid-column-start: 1;
+        grid-column-end: span 3;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    .artikel5{
+        grid-column-start: 1;
+        grid-column-end: span 3;
+        grid-row-start: 3;
+        grid-row-end: 7;
+    }
+
+    .artikel3{
+        grid-column-start: 1;
+        grid-column-end: span 3;
+        grid-row-start: 7;
+        grid-row-end: 8;
+    }
+
+    .artikel2{
+        grid-column-start: 1;
+        grid-column-end: span 3;
+        grid-row-start: 8;
+        grid-row-end: 12;
+    }
+
+    .artikel1{
+        grid-column-start: 1;
+        grid-column-end: span 3;
+        grid-row-start: 12;
+        grid-row-end: 16;
+    }
+
+    .product1{
+        grid-column-start: 1;
+        grid-column-end: span 3;
+        grid-row-start: 16;
+        grid-row-end: 17;
+    }
+
+    .product2{
+        grid-column-start: 1;
+        grid-column-end: span 3;
+        grid-row-start: 17;
+        grid-row-end: 18;
+    }
+
+    .product3{
+        grid-column-start: 1;
+        grid-column-end: span 3;
+        grid-row-start: 18;
+        grid-row-end: 19;
+    }
+
+    .footer{
+        grid-column-start: 1;
+        grid-column-end: span 3;
+
+    }
+
+    .artikel4, .artikel6{
+        display: none;
+    }
+}

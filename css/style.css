@@ -1,0 +1,245 @@
+.wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.wrapper > *{
+    padding: 10px;
+    margin: 10px;
+    flex: 1 100%;
+    border-radius: 10px;
+}
+
+.header{
+    background-color: tomato;
+    height: 150px;
+}
+
+.header img{
+    height: 50px;
+    width: 40px;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.navbar{
+    background-color: rgb(44, 105, 159);
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav-branding{
+    font-size: 2rem;
+}
+
+.nav-link{
+    transition: 0.7s ease;
+}
+
+.nav-link:hover{
+    color: dodgerblue;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    background-color: black;
+}
+
+.hardlopenvideo{
+    order: 1;
+    width: 100%;
+    height: 500px;
+    background-color: darkseagreen;
+    pointer-events: none;
+}
+
+.footer{
+    background-color: lightgreen;
+    height: 50px;
+}
+
+.article1, .article2, .article3{
+    text-align: left;
+    background: deepskyblue;
+    height: 400px;
+    font-size: 15px;
+}
+
+.article1 article, .article2 article, .article3 article{
+    float: left;
+}
+.article1 p, .article2 p, .article3 p{
+    max-width: 300px;
+}
+
+.article1 img, .article2 img, .article3 img{
+    width: 300px;
+    height: 300px;
+    float: right;
+}
+
+.aside1{
+    background: gold;
+    text-align: left;
+}
+
+.cookie{
+    opacity: 0.5;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: #FA0;
+    color: #ffffff;
+}
+
+.article1{
+    flex: 2;
+}
+
+.aside1{
+    order: 2;
+}
+
+.article1{
+    order: 2;
+}
+
+.article2{
+    order: 3;
+}
+.article3{
+    order: 4;
+}
+
+.footer{
+    order: 5;
+}
+
+.aside{
+    flex: 1;
+}
+
+
+/*Tablet*/
+@media only screen and (min-width: 481px) and (max-width: 1279px) {
+    .hardlopenvideo{
+        order: 2;
+    }
+
+    .aside{
+        order: 1;
+        flex: 3;
+    }
+    .article1 img, .article2 img, .article3 img{
+        float: left;
+        width: 200px;
+        height: 200px;
+    }
+
+    .article1 article, .article2 article, .article3 article{
+        float: right;
+    }
+    .article1 p, .article2 p, .article3 p{
+        max-width: 200px;
+    }
+}
+
+
+/*Mobile*/
+@media only screen and (max-width: 480px) {
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        position: fixed;
+        left: -110%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #262626;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .nav-item a{
+        color: white;
+    }
+
+    .nav-menu.active{
+        left: 0;
+    }
+
+
+    .hardlopenvideo{
+        order: 2;
+    }
+
+    .aside{
+        order: 1;
+        flex: 3;
+    }
+
+    .article1 img, .article2 img, .article3 img{
+        float: left;
+        width: 120px;
+        height: 120px;
+    }
+
+    .article1 article, .article2 article, .article3 article{
+        float: right;
+    }
+    .article1 p, .article2 p, .article3 p{
+        max-width: 200px;
+    }
+}
+
+
+
+
+
+
